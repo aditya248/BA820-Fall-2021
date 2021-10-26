@@ -25,7 +25,7 @@ from google.cloud import bigquery
 
 # this is my billing project
 # NOTE:  You shoudl replace below with your own billing project
-PROJECT_ID = 'questrom'
+PROJECT_ID = 'ba820-329602'
 
 
 # make the query and get the data
@@ -35,6 +35,7 @@ SQL = "select * from `questrom.datasets.diamonds` limit 5"
 # we can also do this via pandas 
 df = pd.read_gbq(SQL, PROJECT_ID)
 
+print(df)
 # IMPORTANT:
 # NOTE:  you need to ensure you have the GOOGLE_APPLICATION_CREDENTIALS environment variable 
 # #      properly set to the path per #1 above
